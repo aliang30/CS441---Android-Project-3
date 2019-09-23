@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Title Bar -->
+    <color name = "colorPrimary" >#3F0381</color>
+    <!-- Status Bar -->
+    <color name = "colorPrimaryDark">#4C1685</color>
+    <!-- Button colors. -->
+    <color name = "colorAccent">#540C8D</color>
+
+</resources>
