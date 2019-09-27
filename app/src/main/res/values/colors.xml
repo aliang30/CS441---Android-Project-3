@@ -2,7 +2,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Title Bar -->
-    <color name = "colorPrimary" >#3F0381</color>
+    <color name = "colorPrimary" >#4D0997</color>
     <!-- Status Bar -->
     <color name = "colorPrimaryDark">#4C1685</color>
     <!-- Button colors. -->
