@@ -1,7 +1,6 @@
 package com.example.myapplication3;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -12,9 +11,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        canvasObj = new Canvas(this);
 
-        canvasObj.setBackgroundColor(Color.GREEN);
+
+        canvasObj = new Canvas(this);
 
         setContentView(canvasObj);
     }
