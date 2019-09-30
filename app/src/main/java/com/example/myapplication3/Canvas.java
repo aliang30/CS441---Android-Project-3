@@ -8,6 +8,11 @@ import android.view.View;
 
 public class Canvas extends View {
 
+    private int blueX;
+    private int blueY;
+    private int blueSpeed = 15;
+    private Paint bluePaint = new Paint();
+
     Paint paint = new Paint();
 
     public void init() {
@@ -18,6 +23,9 @@ public class Canvas extends View {
     public Canvas(Context context) {
         super(context);
         init();
+
+        bluePaint.setColor(Color.BLUE);
+        bluePaint.setAntiAlias(false);
     }
 
     public Canvas(Context context, AttributeSet attrs) {
@@ -44,6 +52,7 @@ public class Canvas extends View {
 
         paint.setColor(Color.WHITE);
 
+
         canvas.drawCircle(x/2, y/2, 50, paint);
 
         paint.setColor(Color.WHITE);
@@ -57,5 +66,7 @@ public class Canvas extends View {
         canvas.drawLine(0, 1420, 1500, 1420, paint);
     }
 
+    public void changePos() {
 
+    }
 }
