@@ -713,7 +713,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id image1
 id info
 id invisible
 id italic
@@ -761,6 +760,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id soccer
 id spacer
 id split_action_bar
 id spread

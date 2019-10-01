@@ -1,18 +1,22 @@
 package com.example.myapplication3;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.MotionEvent;
+import android.annotation.SuppressLint;
+import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
+import android.view.MotionEvent;
+
+import android.app.Activity;
+import android.os.Bundle;
+
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+
 public class MainActivity extends Activity {
 
-    Canvas canvasObj;
     private ViewGroup mainLayout;
-    private ImageView image1;
+    private ImageView image;
 
     private int xDelta;
     private int yDelta;
@@ -27,35 +31,46 @@ public class MainActivity extends Activity {
 
         setContentView(canvasObj);
         */
+
         mainLayout = (RelativeLayout) findViewById(R.id.main);
-        image1 = (ImageView) findViewById(R.id.image1);
-        image1.setOnTouchListener(onTouchListener());
+        image = findViewById(R.id.soccer);
+
+        image.setOnTouchListener(onTouchListener());
     }
 
     private OnTouchListener onTouchListener() {
-        return onTouch(view, event) -> {
-            final int x = (int) event.getRawX();
-            final int y = (int) event.getRawY();
+        return new OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
 
-            switch (event.getAction() & MotionEvent.ACTION_MASK) {
-                case MotionEvent.ACTION_DOWN:
-                    RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
-                    xDelta = x - lParams.leftMargin;
-                    yDelta = y - lParams.topMargin;
-                    break;
+                final int x = (int) event.getRawX();
+                final int y = (int) event.getRawY();
 
-                case MotionEvent.ACTION_MOVE:
-                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
-                    layoutParams.leftMargin = x - xDelta;
-                    layoutParams.rightMargin = y - yDelta;
-                    layoutParams.rightMargin = 0;
-                    layoutParams.bottomMargin = 0;
-                    view.setLayoutParams(layoutParams);
-                    break;
+                switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                    case MotionEvent.ACTION_DOWN:
+                        RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
+
+                        xDelta = x - lParams.leftMargin;
+                        yDelta = y - lParams.topMargin;
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
+                        layoutParams.leftMargin = x - xDelta;
+                        layoutParams.topMargin = y - yDelta;
+                        layoutParams.rightMargin = 0;
+                        layoutParams.bottomMargin = 0;
+                        view.setLayoutParams(layoutParams);
+                        break;
+                }
+
+                mainLayout.invalidate();
+                return true;
             }
-            mainLayout.invalidate();
-            return true;
         };
     }
-
 }
