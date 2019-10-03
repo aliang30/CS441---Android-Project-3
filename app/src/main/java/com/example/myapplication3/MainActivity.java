@@ -8,7 +8,8 @@ import android.view.MotionEvent;
 
 import android.app.Activity;
 import android.os.Bundle;
-
+import android.os.Handler;
+import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -36,6 +37,7 @@ public class MainActivity extends Activity {
         image = findViewById(R.id.soccer);
 
         image.setOnTouchListener(onTouchListener());
+        blinkingEffect();
     }
 
     private OnTouchListener onTouchListener() {
@@ -50,7 +52,6 @@ public class MainActivity extends Activity {
                 switch (event.getAction() & MotionEvent.ACTION_MASK) {
                     case MotionEvent.ACTION_DOWN:
                         RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
-
                         xDelta = x - lParams.leftMargin;
                         yDelta = y - lParams.topMargin;
                         break;
@@ -72,5 +73,32 @@ public class MainActivity extends Activity {
                 return true;
             }
         };
+    }
+
+    private void blinkingEffect() {
+        final Handler handler = new Handler();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                //1000 millisecond = 1 sec
+                int timeToBlink = 1000;
+                try{Thread.sleep(timeToBlink);}     catch (Exception e) {}
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Finds text and makes it disappear
+                        TextView text = findViewById(R.id.text);
+                        if(text.getVisibility() == View.VISIBLE){
+                            text.setVisibility(View.INVISIBLE);
+                        }
+                        else{
+                            //Makes text reappear
+                            text.setVisibility(View.VISIBLE);
+                        }
+                        blinkingEffect();
+                    }
+                });
+            }
+        }).start();
     }
 }
