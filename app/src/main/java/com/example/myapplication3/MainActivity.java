@@ -81,13 +81,14 @@ public class MainActivity extends Activity {
             @Override
             public void run() {
                 //1000 millisecond = 1 sec
-                int timeToBlink = 1000;
-                try{Thread.sleep(timeToBlink);}     catch (Exception e) {}
+                int blinkTime = 1000;
+                try{Thread.sleep(blinkTime);}     catch (Exception e) {}
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
                         //Finds text and makes it disappear
                         TextView text = findViewById(R.id.text);
+
                         if(text.getVisibility() == View.VISIBLE){
                             text.setVisibility(View.INVISIBLE);
                         }
