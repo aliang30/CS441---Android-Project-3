@@ -27,13 +27,33 @@
         android:typeface="serif" />
 
     <ImageView
+        android:id="@+id/net"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/net" />
+
+    <ImageView
         android:id="@+id/soccer"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:contentDescription="@string/app_name"
         android:src="@drawable/soccer_ball" />
+
+    <ImageView
+        android:id="@+id/glove"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/glove" />
+
+
 
 
 </RelativeLayout>

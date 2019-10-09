@@ -628,7 +628,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable glove
 drawable grass
+drawable net
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -705,6 +707,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id forever
+id glove
 id gone
 id group_divider
 id groups
@@ -726,6 +729,7 @@ id main
 id message
 id middle
 id multiply
+id net
 id never
 id none
 id normal

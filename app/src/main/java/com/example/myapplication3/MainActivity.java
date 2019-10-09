@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
         */
 
         mainLayout = (RelativeLayout) findViewById(R.id.main);
-        image = findViewById(R.id.soccer);
+        image = findViewById(R.id.glove);
 
         image.setOnTouchListener(onTouchListener());
         blinkingEffect();
