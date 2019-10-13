@@ -1,6 +1,7 @@
 package com.example.myapplication3;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.view.Display;
 import android.view.View;
@@ -24,6 +25,8 @@ public class MainActivity extends Activity {
 
     private ViewGroup mainLayout;
     private ImageView image;
+    private ImageView net;
+    private TextView comment;
     private Canvas canvasObj;
     private int xDelta;
     private int yDelta;
@@ -61,6 +64,8 @@ public class MainActivity extends Activity {
         image = findViewById(R.id.glove);
         ball = findViewById(R.id.soccer);
         ball2 = findViewById(R.id.soccer1);
+        net = findViewById(R.id.net);
+        comment = findViewById(R.id.comment);
 
         image.setOnTouchListener(onTouchListener());
 
@@ -98,6 +103,27 @@ public class MainActivity extends Activity {
         //ball speed
         ballY = ballY - 40;
 
+        //If either ball collision is detected
+        if (hitDetect(ballX, ballY)) {
+            //erase ball1
+            ballX = -100;
+            comment.setTextColor(Color.BLUE);
+            comment.setText("CAUGHT!");
+        }
+
+        if (hitDetect(ball2X, ball2Y)) {
+            //erase ball2
+            ball2X = -100;
+            comment.setTextColor(Color.BLUE);
+            comment.setText("CAUGHT!");
+        }
+
+        //If ball hits the net
+        if (hitDetect1(ball2X, ball2Y)) {
+            comment.setTextColor(Color.RED);
+            comment.setText("SCORED!");
+        }
+
         if(ball.getY() + ball.getHeight() < 0) {
             ballX = (float) Math.floor(Math.random() * (screenWidth - ball.getWidth()));
             ballY = screenHeight + 100.0f;
@@ -117,6 +143,25 @@ public class MainActivity extends Activity {
         ball2.setX(ball2X);
         ball2.setY(ball2Y);
     }
+
+    //hit glove
+    public boolean hitDetect(float x, float y) {
+        if (image.getX() < x && x < (image.getX() + image.getWidth()) &&
+                image.getY() < y && y < (image.getY() + image.getHeight())) {
+            return true;
+        }
+        return false;
+    }
+
+    //hit net
+    public boolean hitDetect1(float x, float y) {
+        if (net.getX() < x && x < (net.getX() + net.getWidth()) &&
+                net.getY() < y && y < (net.getY() + net.getHeight())) {
+            return true;
+        }
+        return false;
+    }
+
 
     private OnTouchListener onTouchListener() {
         return new OnTouchListener() {

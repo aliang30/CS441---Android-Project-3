@@ -691,6 +691,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id comment
 id cone
 id cone1
 id content
