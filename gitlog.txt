@@ -1,0 +1,159 @@
+commit 25917942d7928c1fb8d766e801ef2dabcf086a2e
+Author: aliang30 <aliang30@binghamton>
+Date:   Sun Oct 13 12:00:17 2019 -0400
+
+    Modified positionings of components
+
+commit 2b912053954632f4762f99ee8640846604bf0d13
+Merge: 60507d3 9005db2
+Author: aliang30 <aliang30@binghamton>
+Date:   Sun Oct 13 06:33:23 2019 -0400
+
+    Merge branch 'master' of https://github.com/aliang30/CS441---Android-Project-3
+
+commit 60507d3faa23ebe28e01f3f611952f4b7f9c219a
+Author: aliang30 <aliang30@binghamton>
+Date:   Sun Oct 13 06:32:53 2019 -0400
+
+    Made some edits
+
+commit 9005db2c984a085a84f71f4b9b1fde14703fb454
+Author: Alan Liang <aliang30@binghamton.edu>
+Date:   Sun Oct 13 06:13:49 2019 -0400
+
+    Updated README.md
+
+commit 10da3d5dc6ea2e47370f088b933b3b31213390e8
+Author: Alan Liang <aliang30@binghamton.edu>
+Date:   Sun Oct 13 06:13:16 2019 -0400
+
+    Updated README.md
+
+commit 723452c105f24e219a1eb2a55c37f96e336b1aa6
+Author: aliang30 <aliang30@binghamton>
+Date:   Sun Oct 13 05:46:03 2019 -0400
+
+    Added collision detection and added TextView
+
+commit 5c507fcced6137ce1df02bab86981ebc28400519
+Merge: 41abc62 d631b7c
+Author: aliang30 <aliang30@binghamton>
+Date:   Sat Oct 12 23:40:10 2019 -0400
+
+    Merge branch 'master' of https://github.com/aliang30/CS441---Android-Project-3
+
+commit 41abc6289d7012d40f7a880960f41fdf74dba091
+Author: aliang30 <aliang30@binghamton>
+Date:   Sat Oct 12 23:39:46 2019 -0400
+
+    Added second ball and modified speed of movement
+
+commit d631b7c46e4f71f617d1a7dce52e240dce01b6e6
+Author: Alan Liang <aliang30@binghamton.edu>
+Date:   Sat Oct 12 23:38:26 2019 -0400
+
+    Updated README.md
+
+commit 0118a4312370f4e0dc406742223a76c21738a2ef
+Author: aliang30 <aliang30@binghamton>
+Date:   Sat Oct 12 22:55:15 2019 -0400
+
+    Ball movements and modified activity_main
+
+commit 008deb92f75b8369a2292f96e1ba1ae4a1bc17bf
+Author: aliang30 <aliang30@binghamton>
+Date:   Fri Oct 11 22:36:59 2019 -0400
+
+    Git commit
+
+commit 11ea2d6c8ac42f36424636c2330537afd15171f3
+Author: aliang30 <aliang30@binghamton>
+Date:   Tue Oct 8 22:34:24 2019 -0400
+
+    Added working components
+
+commit aa4065c9ada5df3c38b8376834d148a4707a7345
+Merge: d7e8616 8e76cbb
+Author: aliang30 <aliang30@binghamton>
+Date:   Tue Oct 8 00:00:04 2019 -0400
+
+    Merge branch 'master' of https://github.com/aliang30/CS441---Android-Project-3
+
+commit d7e8616a7de4a9df5802ca1367c304333d246045
+Author: aliang30 <aliang30@binghamton>
+Date:   Mon Oct 7 23:59:21 2019 -0400
+
+    Git commit
+
+commit 8e76cbb1812839ff4114ab1c502fa835c4db4342
+Author: Alan Liang <aliang30@binghamton.edu>
+Date:   Fri Oct 4 23:23:20 2019 -0400
+
+    Updated README.md
+
+commit ac7a53c083a08f19cfa547b232d510f95e0a65fa
+Author: aliang30 <aliang30@binghamton>
+Date:   Wed Oct 2 20:12:21 2019 -0400
+
+    Added text animation
+
+commit ab582083de30898016ffbe19db618139e13b223c
+Author: aliang30 <aliang30@binghamton>
+Date:   Mon Sep 30 23:32:01 2019 -0400
+
+    Ability to move object added
+
+commit 27c0784d231484fa74045f458eb83a7e527c40a6
+Author: aliang30 <aliang30@binghamton>
+Date:   Sun Sep 29 23:07:23 2019 -0400
+
+    Working on object movements
+
+commit 82db38df82d228893be283aec07e33a51fb61d0e
+Merge: 9190d6f 0c32504
+Author: aliang30 <aliang30@binghamton>
+Date:   Sat Sep 28 13:50:08 2019 -0400
+
+    Added modifications to canvas
+
+commit 9190d6f3285f4bb7aa07ee182369b55b73451d14
+Author: aliang30 <aliang30@binghamton>
+Date:   Fri Sep 27 10:43:12 2019 -0400
+
+    Git commit
+
+commit 0c32504e7fbe90034072c2f6f80f41cb09353e8f
+Author: Alan Liang <aliang30@binghamton.edu>
+Date:   Fri Sep 27 10:37:54 2019 -0400
+
+    Created README.md
+
+commit 50f9d515aeb45e2be5c998527a10fbc8cc7d91fd
+Author: aliang30 <aliang30@binghamton>
+Date:   Thu Sep 26 23:59:14 2019 -0400
+
+    Git commit
+
+commit 4b1f71ad802c9e879d9468d24dbbd127b80c7109
+Author: aliang30 <aliang30@binghamton>
+Date:   Thu Sep 26 23:56:15 2019 -0400
+
+    Git commit
+
+commit d8981e6d6b3713f7d9302c3f4db2042c8d1baead
+Author: Alan Liang <aliang30@binghamton.edu>
+Date:   Wed Sep 25 00:03:46 2019 -0400
+
+    Update .gitignore
+
+commit d951c9abe0767c732537400eb216e8d7db4d2c38
+Author: aliang30 <aliang30@binghamton>
+Date:   Wed Sep 25 00:00:04 2019 -0400
+
+    Draw rectangle on screen
+
+commit 23d308829e6ebab1e47259734a3883f2daa8c5e5
+Author: aliang30 <aliang30@binghamton>
+Date:   Mon Sep 23 12:20:47 2019 -0400
+
+    First commit

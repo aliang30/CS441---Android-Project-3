@@ -74,22 +74,25 @@ public class MainActivity extends Activity {
         Display disp = wm.getDefaultDisplay();
         Point size = new Point();
         disp.getSize(size);
+
         screenWidth = size.x;
         screenHeight = size.y;
 
+        //Giving both balls initial coordinates
         ball.setX(-80.0f);
         ball.setY(-80.0f);
 
         ball2.setX(-80.0f);
         ball2.setY(-80.0f);
 
+        //Running ball movement
         timer.schedule(new TimerTask() {
                            @Override
                            public void run() {
                                handler.post(new Runnable() {
                                    @Override
                                    public void run() {
-                                       changePos();
+                                       ballPos();
                                    }
                                });
                            }
@@ -99,7 +102,8 @@ public class MainActivity extends Activity {
         blinkingEffect();
     }
 
-    public void changePos() {
+    //Ball movement
+    public void ballPos() {
         //ball speed
         ballY = ballY - 40;
 
