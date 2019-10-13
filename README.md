@@ -9,19 +9,21 @@ For the third android application, we were assigned to build a game that contain
 
 For every ball you miss, you will receive a message that says "Scored" (meaning the scorer scored) and if you successfully caught the ball, you will receive a message that says "Caught" on the bottom of the screen. The idea came from a 1979 Atari game called Asteroids. In Asteroids, you are given the mission to blast the asteroids to pieces with projectiles before the asteroid reaches you. It kind of gave me the idea and motivation to create a game that relates to that since the game I made involves having the player catch the ball before it reaches the net. On top of that, I love to play soccer. 
 
-9/22 - Planning
-9/23 - First commit
-9/25 - Drew a rectangle on the screen 
-9/28 - Made modifications to canvas
-9/29 - Worked on moving objects around
-9/30 - Added ability to move objects
-10/2 - Added text animation (blinking animation)
-10/4 - 10/7 (Replanning stage)
-10/8 - Added working components on the screen
-10/11 - Added ball movements (able to move from bottom to top)
-10/12 - Added second ball and modified speed of movement
-10/13 - Added collision detection and added TextView on bottom of the screen
-10/13 - Finalizing stage
+
+- 9/22 - Planning
+- 9/23 - First commit
+- 9/25 - Drew a rectangle on the screen 
+- 9/28 - Made modifications to canvas
+- 9/29 - Worked on moving objects around
+- 9/30 - Added ability to move objects
+- 10/2 - Added text animation (blinking animation)
+- 10/4 - 10/7 (Replanning stage)
+- 10/8 - Added working components on the screen
+- 10/11 - Added ball movements (able to move from bottom to top)
+- 10/12 - Added second ball and modified speed of movement
+- 10/13 - Added collision detection and added TextView on bottom of the screen
+- 10/13 - Finalizing stage
+
 
 Sources used:
 - https://stackoverflow.com/questions/34089093/how-to-add-animation-to-a-text-view-in-android
