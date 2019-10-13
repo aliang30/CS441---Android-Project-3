@@ -14,31 +14,53 @@
         android:layout_gravity="center"
         android:background="@drawable/grass" />
 
+    <ImageView
+        android:id="@+id/net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="-100dp"
+        android:contentDescription="@string/app_name"
+        android:scaleX="4"
+        android:scaleY="4"
+        android:src="@drawable/net" />
+
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="Play Soccer!"
+        android:text="Catch the Ball!"
         android:textColor="#fff"
         android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="serif" />
 
+
     <ImageView
-        android:id="@+id/net"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/net" />
+        android:id="@+id/cone"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginTop="420dp"
+        android:src="@drawable/cone" />
+
+    <ImageView
+        android:id="@+id/cone1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="420dp"
+        android:src="@drawable/cone" />
 
     <ImageView
         android:id="@+id/soccer"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:contentDescription="@string/app_name"
@@ -46,13 +68,12 @@
 
     <ImageView
         android:id="@+id/glove"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:contentDescription="@string/app_name"
         android:src="@drawable/glove" />
-
 
 
 

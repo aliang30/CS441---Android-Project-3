@@ -628,6 +628,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable cone
 drawable glove
 drawable grass
 drawable net
@@ -690,6 +691,8 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id cone
+id cone1
 id content
 id contentPanel
 id custom

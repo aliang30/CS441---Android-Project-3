@@ -1,6 +1,8 @@
 package com.example.myapplication3;
 
 import android.annotation.SuppressLint;
+import android.graphics.Point;
+import android.view.Display;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
@@ -9,18 +11,31 @@ import android.view.MotionEvent;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class MainActivity extends Activity {
 
     private ViewGroup mainLayout;
     private ImageView image;
-
+    private Canvas canvasObj;
     private int xDelta;
     private int yDelta;
+
+    private int screenWidth;
+    private int screenHeight;
+    private ImageView ball;
+    private float ballX;
+    private float ballY;
+
+    private Handler handler = new Handler();
+    private Timer timer = new Timer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +49,49 @@ public class MainActivity extends Activity {
         */
 
         mainLayout = (RelativeLayout) findViewById(R.id.main);
+
         image = findViewById(R.id.glove);
+        ball = findViewById(R.id.soccer);
 
         image.setOnTouchListener(onTouchListener());
+
+
+        WindowManager wm = getWindowManager();
+        Display disp = wm.getDefaultDisplay();
+        Point size = new Point();
+        disp.getSize(size);
+        screenWidth = size.x;
+        screenHeight = size.y;
+
+        ball.setX(-80.0f);
+        ball.setY(-80.0f);
+
+        timer.schedule(new TimerTask() {
+                           @Override
+                           public void run() {
+                               handler.post(new Runnable() {
+                                   @Override
+                                   public void run() {
+                                       changePos();
+                                   }
+                               });
+                           }
+                       }, 0, 20);
+
+        //blinking text animation
         blinkingEffect();
+    }
+
+    public void changePos() {
+        //ball speed
+        ballY = ballY - 50;
+
+        if(ball.getY() + ball.getHeight() < 0) {
+            ballX = (float) Math.floor(Math.random() * (screenWidth - ball.getWidth()));
+            ballY = screenHeight + 100.0f;
+        }
+        ball.setX(ballX);
+        ball.setY(ballY);
     }
 
     private OnTouchListener onTouchListener() {
@@ -45,7 +99,6 @@ public class MainActivity extends Activity {
             @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View view, MotionEvent event) {
-
                 final int x = (int) event.getRawX();
                 final int y = (int) event.getRawY();
 
