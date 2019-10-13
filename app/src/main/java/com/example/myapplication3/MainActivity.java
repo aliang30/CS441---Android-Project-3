@@ -144,7 +144,7 @@ public class MainActivity extends Activity {
         ball2.setY(ball2Y);
     }
 
-    //hit glove
+    //returns true if ball hits glove
     public boolean hitDetect(float x, float y) {
         if (image.getX() < x && x < (image.getX() + image.getWidth()) &&
                 image.getY() < y && y < (image.getY() + image.getHeight())) {
@@ -153,7 +153,7 @@ public class MainActivity extends Activity {
         return false;
     }
 
-    //hit net
+    //returns true if ball hits net
     public boolean hitDetect1(float x, float y) {
         if (net.getX() < x && x < (net.getX() + net.getWidth()) &&
                 net.getY() < y && y < (net.getY() + net.getHeight())) {
