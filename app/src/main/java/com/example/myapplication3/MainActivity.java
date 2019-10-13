@@ -30,9 +30,17 @@ public class MainActivity extends Activity {
 
     private int screenWidth;
     private int screenHeight;
+
     private ImageView ball;
+    private ImageView ball2;
+
+    //First ball
     private float ballX;
     private float ballY;
+
+    //Second ball
+    private float ball2X;
+    private float ball2Y;
 
     private Handler handler = new Handler();
     private Timer timer = new Timer();
@@ -52,6 +60,7 @@ public class MainActivity extends Activity {
 
         image = findViewById(R.id.glove);
         ball = findViewById(R.id.soccer);
+        ball2 = findViewById(R.id.soccer1);
 
         image.setOnTouchListener(onTouchListener());
 
@@ -65,6 +74,9 @@ public class MainActivity extends Activity {
 
         ball.setX(-80.0f);
         ball.setY(-80.0f);
+
+        ball2.setX(-80.0f);
+        ball2.setY(-80.0f);
 
         timer.schedule(new TimerTask() {
                            @Override
@@ -84,7 +96,7 @@ public class MainActivity extends Activity {
 
     public void changePos() {
         //ball speed
-        ballY = ballY - 50;
+        ballY = ballY - 40;
 
         if(ball.getY() + ball.getHeight() < 0) {
             ballX = (float) Math.floor(Math.random() * (screenWidth - ball.getWidth()));
@@ -92,6 +104,18 @@ public class MainActivity extends Activity {
         }
         ball.setX(ballX);
         ball.setY(ballY);
+
+        //second ball
+
+        //ball speed
+        ball2Y = ball2Y - 30;
+
+        if(ball2.getY() + ball2.getHeight() < 0) {
+            ball2X = (float) Math.floor(Math.random() * (screenWidth - ball2.getWidth()));
+            ball2Y = screenHeight + 100.0f;
+        }
+        ball2.setX(ball2X);
+        ball2.setY(ball2Y);
     }
 
     private OnTouchListener onTouchListener() {
@@ -130,12 +154,16 @@ public class MainActivity extends Activity {
 
     private void blinkingEffect() {
         final Handler handler = new Handler();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
-                //1000 millisecond = 1 sec
+                //1000 millisecond = 1 second
                 int blinkTime = 1000;
-                try{Thread.sleep(blinkTime);}     catch (Exception e) {}
+
+                try{Thread.sleep(blinkTime);}
+                catch (Exception e) {}
+
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
